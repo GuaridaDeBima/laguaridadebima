@@ -1,0 +1,226 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  /* Contenedor general */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* Header y navegación */
+  header {
+    background-color: #e63946;
+    color: #fff;
+    padding: 1rem 0;
+  }
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header h1 {
+    font-size: 1.8rem;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  nav ul li {
+    margin-left: 1.5rem;
+  }
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Sección Hero */
+  #hero {
+    position: relative;
+  }
+  .hero-container {
+    position: relative;
+    text-align: center;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+  .hero-image {
+    width: 100%;
+    height: 500px;
+    background-color: #95a5a6;
+    background-color: rgba(82, 82, 82, 0.1); /* Ajusta la opacidad según necesites */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #fff;
+  }
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+  }
+  .hero-text h2 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  .hero-text p {
+    font-size: 1.5rem;
+  }
+  
+  /* Sección Menú */
+  #menu {
+    background-color: #fff;
+    padding: 2rem 0;
+    
+  }
+  #menu h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  .menu-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .menu-item {
+    background-color: #fafafa;
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    padding-bottom: 1rem;
+    
+  }
+  .img-placeholder {
+    width: 100%;
+    aspect-ratio: 3/2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    background-size: cover;
+  }
+  
+  
+  /* Sección Ubicación */
+  #ubicacion {
+    padding: 2rem 0;
+    background-color: #fff;
+    text-align: center;
+  }
+  .map-placeholder {
+    width: 600px;
+    height: 400px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  /* Sección Contacto */
+  #contacto {
+    background-color: #fff;
+    padding: 2rem 0;
+  }
+  #contacto form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  #contacto label {
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+  #contacto input,
+  #contacto textarea {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 1rem;
+  }
+  #contacto button {
+    margin-top: 1rem;
+    padding: 0.7rem;
+    border: none;
+    background-color: #e63946;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #1d3557;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+  }
+  
+  /* Estilos Responsivos */
+  @media (max-width: 768px) {
+    .header-container {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .menu-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .map-placeholder {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  .hero-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad según necesites */
+    z-index: 1;
+  }
+  
+  /* Aseguramos que el texto se sitúe por encima del overlay */
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    z-index: 2;
+    text-align: center;
+  }
